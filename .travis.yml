@@ -1,0 +1,16 @@
+os:
+  - linux
+  - osx
+
+language: go
+script:
+  go mod init
+  go build -o x.bin .
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file: x.bin
+  skip_cleanup: true
+  on:
+    tags: true
