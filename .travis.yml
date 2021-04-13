@@ -4,8 +4,9 @@ os:
 
 language: go
 script:
-  go mod init
-  go build -o x.bin .
+  - go mod init .
+  - go build -o x.bin .
+  - ./x.bin
 
 deploy:
   provider: releases
