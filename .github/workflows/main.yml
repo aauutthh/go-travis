@@ -31,6 +31,6 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: build go
-        run: 
-          - go mod init .
-          - go build -o x.bin .
+        run: |
+          go mod init . &&
+          go build -o x.bin .
