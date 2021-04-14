@@ -38,7 +38,7 @@ jobs:
       - run: zip -r linux.zip x-linux.bin
       - id: get_upload_url
         run: 
-          upload_url= "https://uploads.github.com/repos/${{ github.repository }}/releases/1/assets{?name,label}"
+          upload_url="https://uploads.github.com/repos/${{ github.repository }}/releases/1/assets{?name,label}"
           echo ::set-output name=upload_url::$upload_url
       - name: Upload Release Asset
         id: upload-release-asset 
