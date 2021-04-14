@@ -49,5 +49,5 @@ jobs:
           #upload_url: ${{ steps.get_upload_url.outputs.upload_url }}
           upload_url: https://uploads.github.com/repos/${{ github.repository }}/releases/41394313/assets{?name,label}
           asset_path: ./linux.zip
-          asset_name: linux-x.zip
+          asset_name: linux-y.zip
           asset_content_type: application/zip
