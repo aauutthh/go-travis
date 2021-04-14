@@ -33,3 +33,9 @@ jobs:
       - name: build go
         run: |
           go build -o x.bin .
+      - run: echo ${{ github.workspace }}/artifact/x.bin
+      - run: pwd
+      - uses: actions/upload-artifact@v2
+        with: 
+          name: ${{ env.name }}-name  
+          path: x.bin
