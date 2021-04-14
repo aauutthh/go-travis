@@ -42,7 +42,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ACTION_API_TOKEN }}
         with:
-          upload_url: "https://uploads.github.com/repos/${{ GITHUB_REPOSITORY }}/releases/1/assets{?name,label}",
+          upload_url: "https://uploads.github.com/repos/${{ GITHUB_REPOSITORY }}/releases/1/assets{?name,label}"
           asset_path: ./linux.zip
           asset_name: linux-x.zip
           asset_content_type: application/zip
